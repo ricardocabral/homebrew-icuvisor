@@ -5,12 +5,12 @@
 class Icuvisor < Formula
   desc "MCP server connecting intervals.icu training data to AI assistants."
   homepage "https://icuvisor.app"
-  version "0.1.9"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/ricardocabral/icuvisor/releases/download/v0.1.9/icuvisor_0.1.9_macos_universal.tar.gz"
-    sha256 "ea74f080cd82ae5b737014004f2124708a353b305bb1e598b53e275cdd2f2936"
+    url "https://github.com/ricardocabral/icuvisor/releases/download/v1.0.0/icuvisor_1.0.0_macos_universal.tar.gz"
+    sha256 "56f61486e5af5580e32974e55db7eb0c7312acf3e4b6920963497ab28ace9f8b"
 
     define_method(:install) do
       bin.install "icuvisor"
@@ -19,15 +19,15 @@ class Icuvisor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ricardocabral/icuvisor/releases/download/v0.1.9/icuvisor_0.1.9_linux_amd64.tar.gz"
-      sha256 "bca6deac1d065f197aca4eba9f6f4c917366d00d99bd8d7f64b3c880be5fcd66"
+      url "https://github.com/ricardocabral/icuvisor/releases/download/v1.0.0/icuvisor_1.0.0_linux_amd64.tar.gz"
+      sha256 "ee073774bc8cf71195263bcf129aaa68343bde10f5c32611881cd894112f8104"
       define_method(:install) do
         bin.install "icuvisor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ricardocabral/icuvisor/releases/download/v0.1.9/icuvisor_0.1.9_linux_arm64.tar.gz"
-      sha256 "a275c847c27367aad67c353f861c44c42b214e22b2aaae5c53c378ceca5df578"
+      url "https://github.com/ricardocabral/icuvisor/releases/download/v1.0.0/icuvisor_1.0.0_linux_arm64.tar.gz"
+      sha256 "7296af5246f845c433e2f2f604068606b1909f43b40067a91cdc5a4896f09ea2"
       define_method(:install) do
         bin.install "icuvisor"
       end
